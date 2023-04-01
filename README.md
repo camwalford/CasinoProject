@@ -1,6 +1,6 @@
 "# CasinoProject" 
 
-DBInit.sql
+**DBInit.sql**
 
 This file contains all the SQL Queries that will be executed in order to build tables needed in the database.
 
@@ -8,7 +8,7 @@ This file contains the following tables:
 
 - 
 
-DBQueries.sql
+**DBQueries.sql**
 
 This file contains all the SQL Queries that will be executed which will answer the questions provided by instructor.
 
@@ -36,7 +36,7 @@ It addresses the following questions:
 - List of employees who have expired training
 - Num of unallocated uniforms
 
-Eric_Tables.sql
+**Eric_Tables.sql**
 
 This file contains the following commands needed to create tables made by Eric Tatchell.
 
@@ -49,7 +49,7 @@ This file contains the following commands needed to create tables made by Eric T
 - Inventory
 - Shift_Inv
 
-Joseph_Tables.sql
+**Joseph_Tables.sql**
 
 This file contains the following commands needed to create tables made by Joseph Driedger.
 
@@ -59,7 +59,7 @@ This file contains the following commands needed to create tables made by Joseph
 - Certification
 - Role_Certification
 
-Cam_Tables.sql
+**Cam_Tables.sql**
 
 This file contains the following commands needed to create tables made by Cameron Walford.
 
