@@ -25,11 +25,11 @@ It addresses the following questions:
 - List of employee's discipline/performance actions
 - Number of sick days an employee has available
 - Number of vacation days an employee has available
-- Employee Stats
-    Num of Females
-    Num of Males
-    Average Age of Employees
-    Num of Employees Over 50
+- Employee Stats\n
+    Num of Females\n
+    Num of Males\n
+    Average Age of Employees\n
+    Num of Employees Over 50\n
     Num of Employees Under 30
 - List of Employees that have mandatory certification expiring in next 6 weeks
 - List of Employees that need updated in-house training
