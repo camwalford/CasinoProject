@@ -14,8 +14,6 @@ GO
 CREATE DATABASE CASINO;
 GO
 
-
-
 -- Create Tables
 
 
