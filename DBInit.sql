@@ -2,16 +2,19 @@
 
 USE master;
 GO
-IF DB_ID (N'casino') IS NOT NULL
-DROP DATABASE casino;
-GO
-CREATE DATABASE casino;
+
+IF EXISTS (
+	SELECT name
+	FROM sys.databases
+	WHERE name = N'CASINO'
+)
+DROP DATABASE CASINO;
 GO
 
-SELECT name, size, size*1.0/128 AS [Size in MBs]
-FROM sys.master_files
-WHERE name = N'casino';
+CREATE DATABASE CASINO;
 GO
+
+
 
 -- Create Tables
 
