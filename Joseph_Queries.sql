@@ -1,0 +1,74 @@
+USE CASINO;
+
+-- Check All Tables
+/*
+Select * FROM ACHIEVEMENT;
+Select * From CERTIFICATION;
+Select * from DEPARTMENT;
+Select * from EMPLOYEE;
+Select * from EMPLOYEE_REGULATORY_TRAINING;
+Select * from EMPLOYEE_SKILL_TRAINING;
+Select * from INVENTORY;
+Select * from JOB_HIST;
+Select * from LEAVE;
+Select * from REGULATORY_TRAINING;
+Select * from ROLE;
+Select * from ROLE_CERTIFICATION;
+Select * from SCHEDULE;
+Select * from SEC_SKILL;
+Select * from SECTION;
+Select * from SHIFT;
+Select * from SHIFT_INV;
+Select * from SKILL;
+Select * from SKILL_TRAINING;
+Select * from TRAINING_SESSION;
+Select * from WRITTEN_WARNING;
+*/
+
+-- Number of Hours Each Employee Works per Week
+DROP PROCEDURE IF EXISTS NUM_EMP_WEEK_HOURS;
+GO
+CREATE PROCEDURE NUM_EMP_WEEK_HOURS
+	@StartDate DATE,
+	@EndDate DATE
+AS
+BEGIN
+	SELECT SCHEDULE.EMP_ID, SUM(
+		CASE WHEN DATEDIFF(HOUR, SHIFT.SHIFT_START, SHIFT.SHIFT_END) < 0
+		THEN (DATEDIFF(HOUR, SHIFT.SHIFT_START, SHIFT.SHIFT_END) + 24)
+		ELSE DATEDIFF(HOUR, SHIFT.SHIFT_START, SHIFT.SHIFT_END)
+		END) as "Number of Hours"
+	FROM SCHEDULE
+	JOIN SHIFT ON SCHEDULE.SCH_ID = SHIFT.SCH_ID
+	JOIN EMPLOYEE ON SCHEDULE.EMP_ID = EMPLOYEE.EMP_ID
+	WHERE SCHEDULE.SCH_DATE BETWEEN @StartDate AND @EndDate 
+	GROUP BY SCHEDULE.EMP_ID;
+END;
+GO
+
+EXEC NUM_EMP_WEEK_HOURS '2023-03-31', '2023-04-02';
+
+-- Number of labour hours last week
+
+
+-- List of Employees that worked in breaker shifts last month
+
+
+-- How many breaker shifts are scheduled this week
+
+
+-- How many slot attendants are scheduled today
+DROP PROCEDURE IF EXISTS NUM_ATTENDENTS_SCHEDULED;
+GO
+CREATE PROCEDURE NUM_ATTENDENTS_SCHEDULED
+	@DATE_SCHEDULED DATE
+AS
+BEGIN
+	SELECT COUNT(SCHEDULE.EMP_ID) as "Number of Attendants Scheduled"
+	FROM SCHEDULE
+	JOIN EMPLOYEE ON SCHEDULE.EMP_ID = EMPLOYEE.EMP_ID
+	WHERE SCHEDULE.SCH_DATE = @DATE_SCHEDULED
+END;
+GO
+
+EXEC NUM_ATTENDENTS_SCHEDULED '2023-04-02';

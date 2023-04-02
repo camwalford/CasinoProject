@@ -1,27 +1,7 @@
 USE CASINO;
 
 -- View Everything
-Select * FROM ACHIEVEMENT;
-Select * From CERTIFICATION;
-Select * from DEPARTMENT;
-Select * from EMPLOYEE;
-Select * from EMPLOYEE_REGULATORY_TRAINING;
-Select * from EMPLOYEE_SKILL_TRAINING;
-Select * from INVENTORY;
-Select * from JOB_HIST;
-Select * from LEAVE;
-Select * from REGULATORY_TRAINING;
-Select * from ROLE;
-Select * from ROLE_CERTIFICATION;
-Select * from SCHEDULE;
-Select * from SEC_SKILL;
-Select * from SECTION;
-Select * from SHIFT;
-Select * from SHIFT_INV;
-Select * from SKILL;
-Select * from SKILL_TRAINING;
-Select * from TRAINING_SESSION;
-Select * from WRITTEN_WARNING;
+
 
 -- Number of Hours Each Employee Works per Week
 
