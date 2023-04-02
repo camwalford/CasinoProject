@@ -254,15 +254,16 @@ CREATE TABLE SHIFT_INV (
 
 -- Fill in Tables with values
 
-INSERT INTO DEPARTMENT (DEP_NAME)
-VALUES ('SLOT FLOOR'), ('HR');
+INSERT INTO DEPARTMENT (DEP_NAME) VALUES 
+	('SLOT FLOOR'), 
+	('HR');
 
-INSERT INTO ROLE (ROLE_TITLE)
-VALUES ('Director'),
-('Shift Manager'),
-('Floor Supervisor'),
-('Slot Attendant'),
-('Human Resources');
+INSERT INTO ROLE (ROLE_TITLE) VALUES 
+	('Director'),
+	('Shift Manager'),
+	('Floor Supervisor'),
+	('Slot Attendant'),
+	('Human Resources');
 
 INSERT INTO ROLE_RESPONSIBILITIES (ROLE_ID, RESPONSIBILITY) VALUES
 	(1, 'Head of the Slot Floor'),
@@ -372,30 +373,30 @@ INSERT INTO SCHEDULE (EMP_ID, SCH_DATE) VALUES
 --Normal Shifts--
 
 INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SCH_ID, IS_BREAKER) VALUES
-('08:00:00', '16:00:00', 1, 0),
-('08:00:00', '16:00:00', 2, 0),
-('08:00:00', '16:00:00', 3, 0),
-('16:00:00', '00:00:00', 4, 0),
-('16:00:00', '00:00:00', 5, 0),
-('16:00:00', '00:00:00', 6, 0),
-('00:00:00', '08:00:00', 7, 0),
-('00:00:00', '08:00:00', 8, 0),
-('00:00:00', '08:00:00', 9, 0),
-('00:00:00', '08:00:00', 10, 0);
+	('08:00:00', '16:00:00', 1, 0),
+	('08:00:00', '16:00:00', 2, 0),
+	('08:00:00', '16:00:00', 3, 0),
+	('16:00:00', '00:00:00', 4, 0),
+	('16:00:00', '00:00:00', 5, 0),
+	('16:00:00', '00:00:00', 6, 0),
+	('00:00:00', '08:00:00', 7, 0),
+	('00:00:00', '08:00:00', 8, 0),
+	('00:00:00', '08:00:00', 9, 0),
+	('00:00:00', '08:00:00', 10, 0);
 
 --Breaker Shifts--
 
 INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SCH_ID, IS_BREAKER) VALUES
-('09:00:00', '09:15:00', 1, 1),
-('10:00:00', '10:15:00', 2, 1),
-('11:00:00', '11:15:00', 3, 1),
-('18:00:00', '18:15:00', 4, 1),
-('19:00:00', '19:15:00', 5, 1),
-('20:00:00', '20:15:00', 6, 1),
-('01:00:00', '01:15:00', 7, 1),
-('02:00:00', '02:15:00', 8, 1),
-('03:00:00', '03:15:00', 9, 1),
-('04:00:00', '04:15:00', 10, 1);
+	('09:00:00', '09:15:00', 1, 1),
+	('10:00:00', '10:15:00', 2, 1),
+	('11:00:00', '11:15:00', 3, 1),
+	('18:00:00', '18:15:00', 4, 1),
+	('19:00:00', '19:15:00', 5, 1),
+	('20:00:00', '20:15:00', 6, 1),
+	('01:00:00', '01:15:00', 7, 1),
+	('02:00:00', '02:15:00', 8, 1),
+	('03:00:00', '03:15:00', 9, 1),
+	('04:00:00', '04:15:00', 10, 1);
 
 INSERT INTO SECTION (SEC_NAME) VALUES
 	('North'),
