@@ -587,4 +587,4 @@ VALUES
 (7, 'Employee of the Month', 'Outstanding performance and dedication during the month of January', 6, '2023-01-01'),
 (8, 'Amazing Customer Service', 'Recieved multiple accolades in one shift from customers', 6, '2023-03-31'),
 (9, 'Perfect Attendance', 'Completed an entire year without any absences', 6, '2022-12-31'),
-(7, 'Great Teamwork', 'Significant contribution to the success of the team during a stressful shift', 6, '2023-02-28');DROP PROCEDURE IF EXISTS EMP_STATS;
+(7, 'Great Teamwork', 'Significant contribution to the success of the team during a stressful shift', 6, '2023-02-28');
