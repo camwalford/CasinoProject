@@ -57,15 +57,7 @@ GO
 CREATE TABLE ROLE (
 	ROLE_ID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	ROLE_TITLE VARCHAR(30) NOT NULL,
-);
-GO
-
---Responsibilities for specific roles
-CREATE TABLE ROLE_RESPONSIBILITIES (
-ID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-ROLE_ID INT NOT NULL,
-RESPONSIBILITY VARCHAR(250) NOT NULL,
-FOREIGN KEY (ROLE_ID) REFERENCES ROLE (ROLE_ID)
+	ROLE_DESC VARCHAR(75)
 );
 GO
 
@@ -298,60 +290,12 @@ FOREIGN KEY(INV_ID) REFERENCES INVENTORY(INV_ID) ON UPDATE CASCADE
 INSERT INTO DEPARTMENT (DEP_NAME)
 VALUES ('SLOT FLOOR'), ('HR');
 
-INSERT INTO ROLE (ROLE_TITLE)
-VALUES ('Director'),
-('Shift Manager'),
-('Floor Supervisor'),
-('Slot Attendant'),
-('Human Resources');
-
-INSERT INTO ROLE_RESPONSIBILITIES (ROLE_ID, RESPONSIBILITY) VALUES
-(1, 'Head of the Slot Floor'),
-(1, 'Manage diverse team'),
-(1, 'Collaborate with team leaders'),
-(1, 'Responsible for profit and loss, customer service scores, and floor quality'),
-(1, 'Coordinate with various teams and stakeholders'),
-(1, 'Lead status update meetings'),
-(1, 'Responsible for regional area operations including project deadlines, budgets adherence, quality and customer satisfaction'),
-(1, 'Set clear goals and objectives and provide guidance to shift managers and support staff'),
-(1, 'Attend mandatory outside trainings'),
-
-(2, 'Daily management of casino floor'),
-(2, 'Hiring and firing employees'),
-(2, 'Managing money and games'),
-(2, 'Ensuring gaming regulations and laws are followed and assisting high-profile customers'),
-(2, 'Providing discipline and development plans for employees'),
-(2, 'Oversees training and coaches and mentors supervisors to deliver the training'),
-(2, 'Creates and maintains lists and logs used for tracking various metrics and projects (e.g., scheduling, work areas)'),
-(2, 'Resolving customer complaints if escalated from the supervisor level'),
-
-(3, 'Manages Slot Attendants'),
-(3, 'Schedules slot attendants'),
-(3, 'Provides and monitors on-the-job training'),
-(3, 'Ensures staff receive adequate guidance, resources, and information for adequate job performance'),
-(3, 'Responsible for maintaining a clean, safe, friendly and fun environment for guests and employees'),
-(3, 'Provides superior guest service, positively affects interactions with guests and team members'),
-(3, 'Has pre-shift meetings with slot attendants'),
-(3, 'Schedules and conducts in-house trainings'),
-(3, 'Schedules mandatory regulatory online certification/re-certification for slot attendants'),
-
-(4, 'Serve as link between guests and management'),
-(4, 'Serve customers in their section'),
-(4, 'Ensure slots function properly'),
-(4, 'Promote special programs offered by the casino'),
-(4, 'Make change for customers'),
-(4, 'Responsible for float and balancing float at the end of the day'),
-(4, 'Reserve slots for customers'),
-(4, 'Attend in-house trainings'),
-(4, 'Have valid government-issued certification'),
-(4, 'Attend mandatory online trainings'),
-
-(5, 'Keep records of employees'),
-(5, 'Maintain discipline records'),
-(5, 'Create letters of employment'),
-(5, 'Issue records of employment to departing employees'),
-(5, 'Track vacation and sick leave'),
-(5, 'Manage payroll');
+INSERT INTO ROLE (ROLE_TITLE, ROLE_DESC)
+VALUES ('Director', 'Head of the Slot Floor'),
+('Shift Manager', 'Daily management of casino floor'),
+('Floor Supervisor', 'Manages Slot Attendants'),
+('Slot Attendant', 'Serve as link between guests and management'),
+('Human Resources', 'Keep records of employees');
 
 INSERT INTO EMPLOYEE (
 [DEP_ID], [EMP_ROLE_ID], [DATE_ASSIGNED], [EMP_FNAME], [EMP_LNAME], [EMP_HIRE_DATE], [EMP_PAY_RATE], [EMP_STREET_NUM], [EMP_STREET], [EMP_CITY], [EMP_DOB], [EMP_GENDER], [EMP_AGE]
