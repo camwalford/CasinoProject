@@ -1,5 +1,6 @@
 -- Create Database
 
+
 USE master;
 GO
 
@@ -312,8 +313,8 @@ INSERT INTO EMPLOYEE (
 (1, 4, '2023-01-25', 'Sophia', 'Walker', '2022-11-25', 22.00, '777', 'Spruce St', 'New York', '1996-02-14', 'F', 27); -- Slot Attendant
 
 INSERT INTO CERTIFICATION (CERT_NAME, CERT_VALID_FOR) VALUES
-('Basic Regulatory Training', '2024-04-01'),
-('Advanced Regulatory Training', '2025-04-01'),
+('Basic Regulatory Training', '2023-05-07'),
+('Advanced Regulatory Training', '2023-05-07'),
 ('Slot Attendant Training', '2024-04-01'),
 ('Shift Manager Training', '2024-04-01'),
 ('Floor Supervisor Training', '2024-04-01');
@@ -490,8 +491,8 @@ INSERT INTO REGULATORY_TRAINING (TS_ID, CERT_ID) VALUES
 (20, 5);
 
 INSERT INTO EMPLOYEE_REGULATORY_TRAINING (TS_ID, EMP_ID, EXPIRATION_DATE) VALUES
-(11, 1, '2023-04-07'),
-(12, 1, '2023-04-25'),
+(11, 1, '2023-05-07'),
+(12, 1, '2023-05-07'),
 (13, 4, '2024-04-01'),
 (14, 2, '2024-04-01'),
 (15, 3, '2024-04-01'),
