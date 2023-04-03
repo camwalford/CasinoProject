@@ -300,8 +300,8 @@ VALUES ('Director', 'Head of the Slot Floor'),
 INSERT INTO EMPLOYEE (
 [DEP_ID], [EMP_ROLE_ID], [DATE_ASSIGNED], [EMP_FNAME], [EMP_LNAME], [EMP_HIRE_DATE], [EMP_PAY_RATE], [EMP_STREET_NUM], [EMP_STREET], [EMP_CITY], [EMP_DOB], [EMP_GENDER], [EMP_AGE]
 ) VALUES
-(1, 1, '2023-01-01', 'John', 'Doe', '2022-12-01', 50.00, '123', 'Main St', 'Vancouver', '1975-05-25', 'M', 48), -- Director
-(1, 2, '2023-01-15', 'Jane', 'Smith', '2022-12-10', 45.00, '456', 'Park Ave', 'New York', '1982-08-12', 'F', 40), -- Shift Manager
+(1, 1, '2023-01-01', 'John', 'Doe', '2022-12-01', 50.00, '123', 'Main St', 'Vancouver', '1966-05-25', 'M', 48), -- Director
+(1, 2, '2023-01-15', 'Jane', 'Smith', '2022-12-10', 45.00, '456', 'Park Ave', 'New York', '1969-08-12', 'F', 40), -- Shift Manager
 (1, 2, '2023-01-15', 'Michael', 'Brown', '2022-12-15', 45.00, '789', 'Broadway', 'New York', '1985-03-22', 'M', 38),-- Shift Manager
 (1, 5, '2023-01-15', 'Emily', 'Johnson', '2022-12-20', 45.00, '111', '5th Ave', 'New York', '1990-10-15', 'F', 32), -- HR
 (1, 5, '2023-01-20', 'James', 'Williams', '2022-11-30', 30.00, '222', 'Elm St', 'New York', '1988-06-07', 'M', 34), -- HR
@@ -490,8 +490,8 @@ INSERT INTO REGULATORY_TRAINING (TS_ID, CERT_ID) VALUES
 (20, 5);
 
 INSERT INTO EMPLOYEE_REGULATORY_TRAINING (TS_ID, EMP_ID, EXPIRATION_DATE) VALUES
-(11, 1, '2024-04-01'),
-(12, 1, '2025-04-01'),
+(11, 1, '2023-04-07'),
+(12, 1, '2023-04-25'),
 (13, 4, '2024-04-01'),
 (14, 2, '2024-04-01'),
 (15, 3, '2024-04-01'),
